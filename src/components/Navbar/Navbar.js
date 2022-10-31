@@ -8,11 +8,11 @@ const Navbar = ({ user }) => {
   return (
     <div className="header">
       <div className="nav-welcome">
-        <img className="icon" src={logo} />
+        <img className="icon" src={logo} alt={'react-logo'} />
         <p>Bienvenido {user}</p>
       </div>
       <Header />
-      <Link to="/cart">
+      <Link to="/cart" style={{ position: 'relative' }}>
         <Cartwidget />
       </Link>
     </div>

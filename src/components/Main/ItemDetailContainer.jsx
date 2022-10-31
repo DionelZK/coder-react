@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { products } from './productsMock';
+import { products } from '../../Mock/productsMock';
 import { useParams } from 'react-router-dom';
 import ItemDetail from './ItemDetail';
 import './Main.css';
@@ -15,7 +15,7 @@ const ItemDetailContainer = () => {
 
         setTimeout(() => {
           res(producto);
-        }, 2000);
+        }, 500);
       });
     };
     traerProducto()

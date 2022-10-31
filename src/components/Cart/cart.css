@@ -1,0 +1,41 @@
+.cart-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  border: 1px solid black;
+  border-top: 0;
+  height: fit-content;
+  width: 1400px;
+}
+
+.title {
+  font-size: 18px;
+}
+
+.card-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 400px;
+}
+.cart-card {
+  display: flex;
+  justify-content: space-between;
+  width: 90%;
+  height: fit-content;
+  margin: 1.5rem;
+}
+.buy {
+  color: white;
+  background-color: #3483fa;
+  width: 150px;
+  height: 50px;
+  border: 0;
+  border-radius: 30px;
+  cursor: pointer;
+}
+.buy:hover {
+  background-color: #2968c8;
+}

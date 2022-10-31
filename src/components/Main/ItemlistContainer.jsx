@@ -1,17 +1,12 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
-import { products } from './productsMock';
+import { products } from '../../Mock/productsMock';
 import ItemList from './ItemList';
 import './Main.css';
 const ItemListContainer = () => {
   const [items, setItems] = useState([]);
-  //estado
-
-  // const valor = useParams();
-  // console.log(valor.categoryName);
 
   const { category } = useParams();
-  //categoryName -> camisas, remeras, gorras
 
   useEffect(() => {
     const traerProductos = () => {
@@ -34,7 +29,6 @@ const ItemListContainer = () => {
       });
   }, [category]);
 
-  //console.log(items);
   return (
     <div className="item-list-container">
       <ItemList items={items} />
