@@ -1,5 +1,4 @@
 import React, { createContext, useState, useEffect } from 'react';
-import { json } from 'react-router-dom';
 
 import { ToastContainer, toast } from 'react-toastify';
 export const cartContext = createContext();
@@ -66,7 +65,14 @@ export const Data = ({ children }) => {
     return items.reduce((total, item) => item.price * item.quantity + total, 0);
   }
 
+  function emptyCart() {
+    setCart([]);
+    localStorage.setItem('products', JSON.stringify([]));
+  }
+
   function buy() {
+    setCart([]);
+    localStorage.setItem('products', JSON.stringify([]));
     toast.success('Su compra a sido realizada con exito', {
       position: 'top-center',
       autoClose: 5000,
@@ -77,8 +83,18 @@ export const Data = ({ children }) => {
       progress: undefined,
       theme: 'light',
     });
-    setCart([]);
-    localStorage.setItem('products', JSON.stringify([]));
+  }
+  function msgError() {
+    toast.error('las direcciones Email no coinciden', {
+      position: 'top-center',
+      autoClose: 5000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      theme: 'light',
+    });
   }
 
   return (
@@ -94,9 +110,13 @@ export const Data = ({ children }) => {
         cartQuantity,
         finalPrice,
         buy,
+        emptyCart,
+        msgError,
       }}
     >
       {children}
     </cartContext.Provider>
   );
 };
+/*
+}); */

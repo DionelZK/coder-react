@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link, NavLink } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 export const Header = () => {
   return (
     <div>
@@ -21,7 +21,7 @@ export const Header = () => {
         </li>
         <li className="nav-item">
           <NavLink className="nav-item" to="/category/gorras">
-            gorras
+            Gorras
           </NavLink>
         </li>
       </ul>

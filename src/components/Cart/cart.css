@@ -39,3 +39,13 @@
 .buy:hover {
   background-color: #2968c8;
 }
+.btn-checkout {
+  width: 150px;
+  height: 50px;
+  background-color: #3483fa;
+  border-radius: 30px;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
