@@ -85,7 +85,7 @@ export const Data = ({ children }) => {
     });
   }
   function msgError() {
-    toast.error('las direcciones Email no coinciden', {
+    toast.error('ERROR! Vuelva a completar los campos', {
       position: 'top-center',
       autoClose: 5000,
       hideProgressBar: false,
@@ -118,5 +118,3 @@ export const Data = ({ children }) => {
     </cartContext.Provider>
   );
 };
-/*
-}); */
