@@ -29,7 +29,7 @@
 ### Pasos para correr el proyecto en local
 1. Clonar el repositorio
 
- git clone https://github.com/EricWaje/comision-34775.git
+ git clone https://github.com/DionelZK/coder-react.git
 
 2. Abrirlo en algún editor de código e instalar las dependencias
 
